@@ -3,5 +3,5 @@
 ANSIBLE_PROVISIONING_HOME=$(cd $(dirname ${BASH_SOURCE:-$0})/../ansible && pwd)
 
 cd ${ANSIBLE_PROVISIONING_HOME} > /dev/null 2>&1
-ansible-playbook -c localhost main.yml -K --extra-vars="@private.yml" --ask-vault-pass
+ansible-playbook -c localhost update.yml -K
 
