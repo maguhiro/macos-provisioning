@@ -3,4 +3,5 @@
 
 # ansible
 *.retry
+private.yml
 

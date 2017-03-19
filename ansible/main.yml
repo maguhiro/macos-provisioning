@@ -3,9 +3,15 @@
     - name: "user_name"
       prompt: "User Name"
       private: no
+      when: user_name == null
     - name: "email"
       prompt: "User Email Address"
       private: no
+      when: email == null
+    - name: "github_access_token"
+      prompt: "Github Access Token"
+      private: no
+      when: github_access_token == null
   roles:
     - brew
     - git

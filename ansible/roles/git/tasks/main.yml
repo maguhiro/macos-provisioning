@@ -57,3 +57,17 @@
     list_all: yes
     scope: global
 
+- name: Create SSH public key to authorize
+  shell: ssh-keygen -t rsa -C "{{email}}" -f ~/.ssh/id_rsa -N ""
+
+- name: Read SSH public key to authorize
+  shell: cat ~/.ssh/id_rsa.pub
+  register: ssh_pub_key
+
+- name: Authorize key with GitHub
+  local_action:
+    module: github_key
+    name: Access Key for Some Machine
+    token: '{{github_access_token}}'
+    pubkey: '{{ssh_pub_key.stdout}}'
+
