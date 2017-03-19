@@ -1,0 +1,12 @@
+#!/bin/bash
+
+which ansible >/dev/null 2>&1
+if [ $? -ne 0 ];
+then
+  echo "not found command ansible"
+  echo "install ansible"
+  brew install ansible
+else
+  echo "installed ansible"
+fi
+

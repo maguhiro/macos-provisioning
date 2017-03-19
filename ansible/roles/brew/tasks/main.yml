@@ -1,0 +1,34 @@
+# update to latest
+- homebrew: update_homebrew=yes
+
+- name: install {{item}}
+  homebrew: name={{item}} state=present
+  with_items:
+    - ansible
+    - curl
+    - git
+    - peco
+    - rbenv
+    - tmux
+    - tree
+    - vim
+    - zsh
+    - zsh-completions
+
+- name: install {{item}}
+  homebrew_cask: name={{item}} state=present
+  environment:
+    HOMEBREW_CASK_OPTS: --appdir=/Applications
+  with_items:
+    - alfred
+    - dash
+    - google-chrome
+    - google-japanese-ime
+    - iterm2
+    - java
+    - slack
+
+# upgrade homebrew tasks to latest
+- name: upgrade homebrew
+  homebrew: update_homebrew=yes upgrade_all=yes
+

@@ -1,0 +1,34 @@
+- git_config:
+    name: user.name
+    scope: global
+    value: "{{user_name}}"
+
+- git_config:
+    name: user.email
+    scope: global
+    value: "{{email}}"
+
+- git_config:
+    name: core.editor
+    scope: global
+    value: 'vim -c "set fenc=utf-8"'
+
+- git_config: 
+    name: color.diff
+    scope: global
+    value: true
+
+- git_config:
+    name: color.status
+    scope: global
+    value: true
+
+- git_config:
+    name: color.branch
+    scope: global
+    value: true
+
+- git_config:
+    list_all: yes
+    scope: global
+

@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_prompt:
+    - name: "user_name"
+      prompt: "User Name"
+      private: no
+    - name: "email"
+      prompt: "User Email Address"
+      private: no
+  roles:
+    - brew
+    - git
+
