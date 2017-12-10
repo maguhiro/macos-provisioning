@@ -5,15 +5,22 @@
   homebrew: name={{item}} state=present
   with_items:
     - ansible
+    - carthage
+    - colordiff
     - curl
     - git
+    - jq
     - peco
     - rbenv
+    - swiftlint
+    - swiftformat
     - tmux
     - tree
     - vim
     - zsh
     - zsh-completions
+    - wget
+    - fish
 
 - name: install {{item}}
   homebrew_cask: name={{item}} state=present
@@ -22,11 +29,13 @@
   with_items:
     - alfred
     - dash
+    - charles
     - google-chrome
     - google-japanese-ime
     - iterm2
     - java
     - slack
+    - sublime-text
 
 # upgrade homebrew tasks to latest
 - name: upgrade homebrew
