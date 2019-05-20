@@ -1,7 +1,0 @@
-#!/bin/bash
-
-ANSIBLE_PROVISIONING_HOME=$(cd $(dirname ${BASH_SOURCE:-$0})/../ansible && pwd)
-
-cd ${ANSIBLE_PROVISIONING_HOME} > /dev/null 2>&1
-ansible-playbook -c localhost update.yml -K
-
