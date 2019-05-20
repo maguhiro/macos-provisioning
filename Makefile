@@ -11,8 +11,7 @@ setup: check.xcode
 	@$(BIN_DIR)/install_ansible
 
 provision: check.xcode
-	@$(BIN_DIR)/execute_ansible
+	@$(BIN_DIR)/execute_ansible_setup
 
 check.xcode:
 	@$(BIN_DIR)/check_xcode
-
