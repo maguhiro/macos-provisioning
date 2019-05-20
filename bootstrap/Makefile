@@ -2,7 +2,7 @@ USER_NAME =  hoge
 EMAIL =  fuga@gmail.com
 
 .PHONY: setup
-setup: gitconfig github
+setup: gitconfig github repository
 	@echo "### bootstrap処理が完了しました。"
 
 .PHONY: gitconfig
@@ -28,3 +28,9 @@ github:
 	@open https://github.com/settings/keys
 	@echo "ブラウザで https://github.com/settings/keys を開きました。"
 	@echo "クリップボードに公開鍵情報をコピーしたのでGithubに登録してください。"
+
+.PHONY: repository
+repository:
+	@echo "### 環境構築用のリポジトリをCloneします。"
+	@mkdir -p ~/dev
+	@git clone git@github.com:maguhiro/osx-provisioning.git ~/dev/osx-provisioning
