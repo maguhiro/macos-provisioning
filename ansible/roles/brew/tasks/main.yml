@@ -1,6 +1,11 @@
 # update to latest
 - homebrew: update_homebrew=yes
 
+- name:  install {{item}}
+  homebrew_tap: tap="{{item}}" state=present
+  with_items:
+    - caskroom/fonts
+
 - name: install {{item}}
   homebrew: name={{item}} state=present
   with_items:
@@ -17,8 +22,6 @@
     - tmux
     - tree
     - vim
-    - zsh
-    - zsh-completions
     - wget
     - fish
 
@@ -30,12 +33,16 @@
     - alfred
     - dash
     - charles
+    - firefox
+    - font-fira-code
     - google-chrome
     - google-japanese-ime
     - iterm2
     - java
     - slack
     - sublime-text
+    - spectacle
+    - visual-studio-code
 
 # upgrade homebrew tasks to latest
 - name: upgrade homebrew
