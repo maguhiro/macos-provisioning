@@ -5,7 +5,7 @@
   homebrew_tap: tap="{{item}}" state=present
   with_items:
     - homebrew/cask-versions
-    - caskroom/fonts
+    - homebrew/cask-fonts
 
 - name: install {{item}}
   homebrew: name={{item}} state=present
