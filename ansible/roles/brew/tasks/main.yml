@@ -4,26 +4,35 @@
 - name:  install {{item}}
   homebrew_tap: tap="{{item}}" state=present
   with_items:
+    - homebrew/cask-versions
     - caskroom/fonts
 
 - name: install {{item}}
   homebrew: name={{item}} state=present
   with_items:
-    - ansible
-    - carthage
-    - colordiff
-    - curl
-    - git
-    - jq
-    - peco
-    - rbenv
-    - swiftlint
-    - swiftformat
-    - tmux
-    - tree
-    - vim
-    - wget
     - fish
+    - git
+    - curl
+    - jq
+    - tree
+    - peco
+    - ghq
+    - hub
+    - colordiff
+    - ansible
+    - wget
+    - vim
+    - tig
+    - exa
+    - bat
+    - fd
+    - procs
+    - ripgrep
+    - tmux
+    - mint # Swift製コマンドラインツールのパッケージ管理ツール
+    - carthage
+    - rbenv
+    - nodebrew
 
 - name: install {{item}}
   homebrew_cask: name={{item}} state=present
@@ -31,18 +40,21 @@
     HOMEBREW_CASK_OPTS: --appdir=/Applications
   with_items:
     - alfred
-    - dash
-    - charles
-    - firefox
-    - font-fira-code
-    - google-chrome
+    - rectangle # 画面分割アプリ
     - google-japanese-ime
-    - iterm2
-    - java
-    - slack
-    - sublime-text
-    - spectacle
+    - google-chrome
+    - firefox
     - visual-studio-code
+    - iterm2
+    - slack
+    - tweetbot
+    - kindle
+    - 1password
+    - jetbrains-toolbox
+    - dash
+    - docker
+    - charles
+    - font-fira-code
 
 # upgrade homebrew tasks to latest
 - name: upgrade homebrew
