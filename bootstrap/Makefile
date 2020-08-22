@@ -33,4 +33,4 @@ github:
 repository:
 	@echo "### 環境構築用のリポジトリをCloneします。"
 	@mkdir -p ~/dev
-	@git clone git@github.com:maguhiro/osx-provisioning.git ~/dev/osx-provisioning
+	@git clone git@github.com:maguhiro/macos-provisioning.git ~/dev/macos-provisioning
