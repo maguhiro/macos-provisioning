@@ -26,6 +26,7 @@
     - exa
     - bat
     - fd
+    - sd
     - procs
     - ripgrep
     - tmux
