@@ -34,6 +34,7 @@
     - carthage
     - rbenv
     - nodebrew
+    - rename
 
 - name: install {{item}}
   homebrew_cask: name={{item}} state=present
